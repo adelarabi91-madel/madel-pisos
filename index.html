@@ -646,6 +646,28 @@
   .hidden{display:none!important}
   @media(max-width:1240px){.panel-right{display:none}}
   @media(max-width:880px){.panel-left{width:330px;min-width:310px}}
+
+@media(max-width:768px){
+    .topbar{padding:0 12px;height:56px}
+    .brand .div,.brand .dept{display:none}
+    .topbar-right{flex:1;min-width:0;justify-content:flex-end;gap:8px}
+    .role-switch{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+    .role-switch button{scroll-snap-align:start;flex-shrink:0}
+    .app-body{flex-direction:column}
+    .side-panel{display:none}
+    .center-body{flex:1}
+    .center-tabs,.kanban-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+    .center-tab,.kanban-col{scroll-snap-align:start;flex-shrink:0}
+    .kanban-col{min-width:280px}
+    .map-frame{height:60vw;min-height:240px}
+    .provider-app{position:fixed;inset:0;overflow-y:auto}
+    .modal-sheet,.modal-os,.modal-audit,.modal-checklist{bottom:0;left:0;right:0;top:auto;border-radius:18px 18px 0 0;max-height:94vh}
+    .admin-nav{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .admin-nav a{flex-shrink:0}
+    .admin-body{flex-direction:column}
+    .modal-back{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000}
+    .modal-sheet,.modal-os{position:fixed;z-index:1001;padding:18px 0 0;max-height:94vh}
+  }
 </style>
 </head>
 <body>
