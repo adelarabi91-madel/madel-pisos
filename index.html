@@ -646,8 +646,14 @@
 
   /* ===== responsivo / mobile ===== */
   @media(max-width:768px){
-    .topbar{padding:0 12px;height:56px}
+    html,body{height:auto;min-height:100%}
+    body{overflow:visible;overflow-x:hidden}
+    .topbar{padding:0 12px;height:56px;position:sticky;top:0}
     .brand .div,.brand .dept{display:none}
+    .brand img.logo{height:26px}
+    .user-chip{padding:4px;gap:4px}
+    .user-chip .uc-meta{display:none}
+    .user-chip .uc-out{margin:0}
     .topbar-right{flex:1;min-width:0;justify-content:flex-end;gap:8px}
     .role-switch{overflow-x:auto;max-width:100%;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
     .role-switch::-webkit-scrollbar{display:none}
@@ -656,7 +662,7 @@
     .stage{flex-direction:column;height:auto;min-height:calc(100vh - 56px)}
     .panel-left{width:100%;min-width:0;overflow:visible;border-right:none;border-bottom:1px solid var(--line)}
     .panel-left .scroll{overflow:visible;flex:none}
-    .panel-center{width:100%;min-width:0;flex:none;height:80vh;min-height:520px}
+    .panel-center{width:100%;min-width:0;flex:none;height:80vh;min-height:480px;order:-1;border-bottom:1px solid var(--line)}
     .panel-right{display:none}
 
     .center-toolbar{padding:0 10px;gap:8px}
@@ -718,7 +724,7 @@
 
   .hidden{display:none!important}
   @media(max-width:1240px){.panel-right{display:none}}
-  @media(max-width:880px){.panel-left{width:330px;min-width:310px}}
+  @media(max-width:880px) and (min-width:769px){.panel-left{width:330px;min-width:310px}}
 </style>
 </head>
 <body>
